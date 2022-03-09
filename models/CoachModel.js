@@ -2,7 +2,7 @@ module.exports = (_db) => {
 	db = _db;
 	return CoachModel;
 };
-
+//test
 class CoachModel {
 	
     static getAllCoaches () {
