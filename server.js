@@ -38,7 +38,6 @@ mysql
 		// port: PORT,
 	})
 	.then((db) => {
-		// console.log('raa',db);
 		console.log(`Bien connecté à : ${db.config.database}`);
 		setInterval(async () => {
 			let res = await db.query("SELECT 1");

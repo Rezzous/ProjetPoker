@@ -7,7 +7,7 @@ class CoachModel {
 	
     static getAllCoaches () {
 		return db
-			.query("SELECT * FROM coaches ")
+			.query("SELECT id, firstName, lastName, pseudo, description, type1, type2, type3, tauxHoraire FROM coaches ")
 			.then((res) => {
 				return res;
 			})
@@ -18,7 +18,7 @@ class CoachModel {
 
 	static getOneCoach(id) {
 		return db
-			.query("SELECT * FROM coaches WHERE id= ?", [id])
+			.query("SELECT id, firstName, lastName, pseudo, description, type1, type2, type3, tauxHoraire FROM coaches WHERE id= ?", [id])
 			.then((res) => {
 				return res;
 			})

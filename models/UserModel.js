@@ -9,7 +9,7 @@ module.exports = (_db) => {
 class UserModel {
 	static getUserByMail(email) {
 		return db
-			.query("SELECT * FROM users WHERE email = ?", [email])
+			.query("SELECT firstName, lastName, email, password FROM users WHERE email = ?", [email])
 			.then((res) => {
 				return res;
 			})
@@ -41,7 +41,7 @@ class UserModel {
 
 	static getOneUser(id) {
 		return db
-			.query("SELECT * FROM users WHERE id= ?", [id])
+			.query("SELECT firstName, lastName, email, password FROM users WHERE id= ?", [id])
 			.then((user) => {
 				if (user.length === 0) {
 					return {

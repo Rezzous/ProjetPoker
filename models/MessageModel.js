@@ -16,16 +16,6 @@ class MessageModel {
 			});
 	}
 
-	static getMessages () {
-		return db
-			.query("SELECT * FROM messages")
-			.then((res) => {
-				return res;
-			})
-			.catch((err) => {
-				return err;
-			});
-	}
 
 	static saveOneMessage(req) {
 		return db

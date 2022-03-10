@@ -7,7 +7,7 @@ class TestimonyModel {
 	
     static getAllTestimonies () {
 		return db
-			.query("SELECT * FROM testimony ")
+			.query("SELECT id, lastName, firstName, title, content, creationTimestamp FROM testimony ")
 			.then((res) => {
 				return res;
 			})
