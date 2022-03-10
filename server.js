@@ -25,7 +25,7 @@ const messageRoutes = require("./routes/messageRoutes");
 const HOST = process.env.HOST_DB || config.db.host;
 const DATABASE = process.env.DATABASE || config.db.database;
 const USER = process.env.USER || config.db.user;
-const PASSWORD = process.env.PASSWORD;
+const PASSWORD = process.env.PASSWORD || config.db.password;
 const PORT = process.env.PORT || 8000;
 
 
