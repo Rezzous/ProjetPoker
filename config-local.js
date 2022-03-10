@@ -6,9 +6,7 @@ module.exports = {
         password: "Mesocyclone31",
         // port: ""
     },
-    token: {
-        secret: "mesocyclone"
-    }
+    
 }
 
 // module.exports = {
@@ -19,7 +17,5 @@ module.exports = {
 //         password: "",
 //         // port: ""
 //     },
-//     token: {
-//         secret: "mesocyclone"
-//     }
+//     
 // }
