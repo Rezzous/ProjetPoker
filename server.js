@@ -9,6 +9,10 @@ const app = express();
 
 require('dotenv').config()
 
+if (!process.env.HOST_DB) {
+	var config = require("./config-local");
+}
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,7 +29,7 @@ const messageRoutes = require("./routes/messageRoutes");
 const HOST = process.env.HOST_DB || config.db.host;
 const DATABASE = process.env.DATABASE || config.db.database;
 const USER = process.env.USER || config.db.user;
-const PASSWORD = process.env.PASSWORD || config.db.password;
+const PASSWORD = process.env.PASSWORD;
 const PORT = process.env.PORT || 8000;
 
 
